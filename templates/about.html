@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .about-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+        .header-content {
+            margin-bottom: 20px;
+        }
+        .header-content h1 {
+            color: #333;
+        }
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .about-container h2, .about-container h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .about-container p {
+            margin: 10px 0;
+            line-height: 1.6;
+            color: #555;
+        }
+        .about-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .about-container ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            color: #555;
+        }
+        .about-container ul li:before {
+            content: "🎵";
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <header>
+            <div class="header-content">
+                <h1>About Us</h1>
+                <nav>
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <a href="{{ url_for('contact') }}">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h2>About the Music Player</h2>
+                <p>Welcome to our Music Player application. Here you can explore songs from various artists and enjoy your favorite tracks. Our app provides a smooth and interactive experience for music enthusiasts.</p>
+                <p>With features like volume control and a user-friendly interface, our music player is designed to enhance your listening experience.</p>
+                <h3>Features</h3>
+                <ul>
+                    <li>Explore a wide variety of songs from different artists</li>
+                    <li>Easy-to-use volume control</li>
+                    <li>Responsive design for an optimal experience on all devices</li>
+                    <li>Secure login and user management</li>
+                </ul>
+                <h3>Our Mission</h3>
+                <p>Our mission is to create an enjoyable and engaging music experience for all users. We are constantly working to improve our app and bring you the best features to make your music journey unforgettable.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

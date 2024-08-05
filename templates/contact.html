@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Include Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .contact-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        .header-content {
+            margin-bottom: 20px;
+        }
+        .header-content h1 {
+            color: #333;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .contact-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .contact-container p {
+            margin: 10px 0;
+        }
+        .contact-container a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-container a:hover {
+            text-decoration: underline;
+        }
+        .social-icon {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        .social-icon:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <header>
+            <div class="header-content">
+                <h1>Contact Us</h1>
+                <nav>
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <a href="{{ url_for('about') }}">About</a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section>
+                <h2>Contact Information</h2>
+                <p>If you have any questions or need support, please reach out to us:</p>
+                <p>Email: <a href="mailto:taff@gmail.com">taff@gmail.com</a></p>
+                <p>Phone: <a href="tel:+918985692845">+91 8985692845</a></p>
+                <p>Address: 123 Music Lane, Melodious City, MX</p>
+                <h3>Follow Us</h3>
+                <p>Stay connected with us on social media:</p>
+                <p>
+                    <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

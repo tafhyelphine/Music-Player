@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Music Player</h1>
+            <nav>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+                <a href="{{ url_for('feedback') }}">Feedback</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Select an Artist</h1>
+        <div class="artists">
+            <div class="artist-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ouTMFQVPPu9ho3QnGW2sWNaU5Gf7R0eyjQ&s" alt="Arijit Singh">
+                <h2><a href="{{ url_for('get_songs_by_artist', artist='arijit_singh') }}">Arijit Singh</a></h2>
+            </div>
+            <div class="artist-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqpPSPeYhZnwJrGpmBTSzTdV2uw7jda1sCtQ&s" alt="Armaan Malik">
+                <h2><a href="{{ url_for('get_songs_by_artist', artist='armaan_malik') }}">Armaan Malik</a></h2>
+            </div>
+            <div class="artist-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPb30VED3SlfXAfUou2TTsbMS9OKPlsJ02Wg&s" alt="Darshan Raval">
+                <h2><a href="{{ url_for('get_songs_by_artist', artist='darshan_raval') }}">Darshan Raval</a></h2>
+            </div>
+            <div class="artist-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7GphhqgaOuanGrt5J12-1kkEP2PWt3PAL1Q&s" alt="Jubin Nautiyal">
+                <h2><a href="{{ url_for('get_songs_by_artist', artist='jubin_nautiyal') }}">Jubin Nautiyal</a></h2>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

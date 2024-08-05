@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ artist_name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>{{ artist_name }}</h1>
+            <nav>
+                <a href="{{ url_for('about') }}">About</a>
+                <a href="{{ url_for('contact') }}">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="songs-list" id="songs">
+            {% for song in songs %}
+                <div class="song-card">
+                    <a href="{{ url_for('play_song', artist=artist_name.lower().replace(' ', '_'), song=song.title) }}" data-song="{{ song.title }}" data-path="{{ song.path }}">{{ song.title }}</a>
+                </div>
+            {% endfor %}
+        </div>
+        <audio id="audio-player" controls style="display:none;"></audio>
+    </main>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
